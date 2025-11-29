@@ -45,13 +45,6 @@ document.addEventListener("DOMContentLoaded",function(){
         </div>
       </div>`;  
 
-
-
-
-
-document.getElementById("planlama_linki").addEventListener("click",function(){
-
-
       degisken_alan.innerHTML = seyahat_planlayiciHTML;
       degisken_alan.style.display = "block";
 
@@ -497,7 +490,7 @@ request.addEventListener("load", function() {
            
       });
 
-})
+
 
 });
 
