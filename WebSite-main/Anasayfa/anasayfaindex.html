@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Anasayfa</title>
     
+    <script src="anasayfa.js" defer></script>
     <link rel="stylesheet" href="anasayfa.css">
-     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet">
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 p-3 rounded shadow-sm">
- <a class="navbar-brand" href="anasayfaindex.html">
-  <img src="logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
-</a>
+  <a class="navbar-brand" href="anasayfaindex.html">
+    <img src="logo.png" alt="Logo" width="60" height="60">
+  </a>
 
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç">
@@ -22,33 +24,156 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarNav">
+
+    <!-- Sol Menü -->
     <ul class="navbar-nav me-auto">
       <li class="nav-item"><a class="nav-link" href="anasayfaindex.html">Anasayfa</a></li>
-      <li class="nav-item"><a class="nav-link" href="../SeyahatiniziPlanlayin/seyahat_planlama.html">Seyahatinizi Planlayın</a></li>
-      <li class="nav-item"><a class="nav-link" href="../TurkiyeOzel/">Türkiye Özel</a></li>
+      <li class="nav-item"><a class="nav-link" href="../SeyahatiniziPlanlayin/seyahat_planlama.html" id="planlama_linki">Seyahatinizi Planlayın</a></li>
+      <li class="nav-item"><a class="nav-link" href="../TurkiyeOzel/turkiyeozel.html">Türkiye Özel</a></li>
       <li class="nav-item"><a class="nav-link" href="../SeyahatTeklifleri/seyahatteklifleri.html">Seyahat Teklifleri</a></li>
-     </ul>
-      <div class="ms-auto">
-  <form class="d-flex align-items-center" role="search">
-    <div class="input-group input-group-sm w-auto"> <!-- w-auto -> tam genişlikten kurtarır -->
-      <input type="text" class="form-control" placeholder="Ara..." aria-label="Ara">
-      <button class="btn btn-outline-primary btn-sm" type="submit">Ara</button>
+    </ul>
+
+    <!-- Ara Butonu -->
+    <form class="d-flex align-items-center me-3" role="search">
+      <div class="input-group input-group-sm">
+        <input type="text" class="form-control" placeholder="Ara...">
+        <button class="btn btn-outline-primary btn-sm" type="submit">Ara</button>
+      </div>
+    </form>
+
+    <!-- Giriş / Çıkış Alanı -->
+    <div class="d-flex align-items-center">
+      <span id="userDisplay" class="fw-bold me-3"></span>
+
+      <a href="login-register.html" id="loginNav" class="btn btn-primary btn-sm">Giriş Yap</a>
+
+      <a href="#" id="logoutBtn" class="btn btn-danger btn-sm ms-2" style="display:none;">
+        Çıkış Yap
+      </a>
     </div>
 
-  </nav>
+  </div>
+</nav>
+
+
+<!-- HERO BANNER -->
+<div class="hero-banner position-relative text-white">
+    <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92"
+         class="img-fluid w-100" style="height: 500px; object-fit: cover;">
+  
+    <div class="position-absolute top-50 start-50 translate-middle text-center">
+      <h1 class="fw-bold display-4 text-shadow">Türkiye’yi Keşfet!</h1>
+      <p class="lead text-shadow">Hayalinizdeki seyahat burada başlıyor.</p>
+      <a href="seyahatiniziplanlayin.html" class="btn btn-primary btn-lg mt-2">
+        Seyahat Planlamaya Başla
+      </a>
+    </div>
+  </div>
+
+<div class="container-fluid" id="degisken_alan">
     
+  <!--Sehir kartlari bolumu-->
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">En Popüler Türkiye Şehirleri</h2>
+    <div class="row g-4">
     
+        <!-- İstanbul -->
+        <div class="col-md-4">
+        <div class="card shadow h-100">
+            <img src="https://images.unsplash.com/photo-1581320540558-26c8dbd4f2a9"
+                class="card-img-top" alt="İstanbul">
+            <div class="card-body">
+            <h5 class="card-title">İstanbul</h5>
+            <p class="card-text">Tarihin, kültürün ve modern yaşamın kalbi.</p>
+            <a href="#" class="btn btn-primary">Keşfet</a>
+            </div>
+        </div>
+        </div>
+    
+        <!-- Kapadokya -->
+        <div class="col-md-4">
+        <div class="card shadow h-100">
+            <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92"
+                class="card-img-top" alt="Kapadokya">
+            <div class="card-body">
+            <h5 class="card-title">Kapadokya</h5>
+            <p class="card-text">Balon turları ve peri bacaları ile ünlü.</p>
+            <a href="#" class="btn btn-primary">Keşfet</a>
+            </div>
+        </div>
+        </div>
+    
+        <!-- Antalya -->
+        <div class="col-md-4">
+        <div class="card shadow h-100">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                class="card-img-top" alt="Antalya">
+            <div class="card-body">
+            <h5 class="card-title">Antalya</h5>
+            <p class="card-text">Deniz, güneş ve turizmin başkenti.</p>
+            <a href="#" class="btn btn-primary">Keşfet</a>
+            </div>
+        </div>
+        </div>
+    
+    </div>
+    
+      <!-- TEMA SEÇ BÖLÜMÜ -->
+<section class="container my-5">
+    <h2 class="text-center mb-4 fw-bold">Tema Seç</h2>
+  
+    <div class="row g-4">
+  
+      <!-- Deniz Tatili -->
+      <div class="col-md-4">
+        <div class="card shadow-sm tema-kart">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+               class="card-img-top" alt="Deniz Tatili">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Deniz Tatili</h5>
+            <p class="card-text">Türkiye’nin en güzel sahil şehirlerini keşfet.</p>
+            <a href="#" class="btn btn-primary">Keşfet</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Kültür Turu -->
+      <div class="col-md-4">
+        <div class="card shadow-sm tema-kart">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" 
+               class="card-img-top" alt="Kültür Turu">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Kültür Turu</h5>
+            <p class="card-text">Tarihi şehirler ve kültürel rotaları deneyimle.</p>
+            <a href="#" class="btn btn-primary">Keşfet</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Dağ Turu -->
+      <div class="col-md-4">
+        <div class="card shadow-sm tema-kart">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+               class="card-img-top" alt="Dağ Turu">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Dağ Turu</h5>
+            <p class="card-text">Doğa yürüyüşü, kamp ve dağ atmosferi.</p>
+            <a href="#" class="btn btn-primary">Keşfet</a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+      
+</div>
 
-
-
-  </form>
 </div>
 
 
-
-   
- 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js" defer></script>
 
 </body>
 </html>
