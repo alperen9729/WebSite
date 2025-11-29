@@ -1,0 +1,33 @@
+.navbar .nav-link {
+  transition: transform 0.2s ease, color 0.2s ease;
+  
+}
+
+.navbar .nav-link:hover {
+  transform: scale(1.12); /* biraz büyütür */
+  color: #000;             /* istersen renk değişimi */
+}
+.navbar .btn:hover {
+  transform: scale(1.10);
+  transition: transform 0.2s ease;
+}
+
+  .navbar-nav .nav-link {
+    margin-right: 18px;   
+    margin-left: 18px;    
+}
+ .navbar-brand img {
+    transition: transform 0.25s ease;
+  }
+
+  .navbar-brand img:hover {
+    transform: scale(2.15); /* Üzerine gelince hafif büyür */
+  }
+
+
+ #degisken_alan {
+    display: "block";
+    width: 50%;
+    padding: 20px;
+    margin-top: 20px;
+}
