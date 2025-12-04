@@ -878,7 +878,7 @@ request.addEventListener("load", function() {
     text.setAttribute("font-size", "9");
    // text.setAttribute("font-weight", "bold");
     text.setAttribute("font-style", "italic");
-    text.setAttribute("fill", "red");
+    text.setAttribute("fill", "yellow");
     text.setAttribute("pointer-events","none");
     city.appendChild(text);
    });
